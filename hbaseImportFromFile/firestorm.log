@@ -1,0 +1,205 @@
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898989/hbase-client-0.98.17-hadoop2.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898990/hbase-server-0.98.17-hadoop2.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898991/hbase-protocol-0.98.17-hadoop2.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898992/protobuf-java-2.5.0.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898993/hbase-common-0.98.17-hadoop2.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898994/hbase-hadoop-compat-0.98.17-hadoop2.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898995/guava-12.0.1.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898996/zookeeper-3.4.6.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898997/htrace-core-2.04.jar
+INFO main org.apache.hadoop.mapred.LocalDistributedCacheManager - file:/tmp/hadoop-fandong/mapred/local/1563377898998/hadoop-mapreduce-client-core-2.7.1.jar
+INFO main org.apache.hadoop.mapreduce.Job - The url to track the job: http://localhost:8080/
+INFO main org.apache.hadoop.mapreduce.Job - Running job: job_local1909352158_0001
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - OutputCommitter set in config null
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+INFO Thread-80 org.apache.hadoop.hbase.mapreduce.TableOutputFormat - Created table instance for stations
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - OutputCommitter is org.apache.hadoop.hbase.mapreduce.TableOutputCommitter
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Starting mapper thread pool executor.
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Max local threads: 1
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Map tasks to process: 1
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Waiting for map tasks
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.LocalJobRunner - Starting task: attempt_local1909352158_0001_m_000000_0
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.SortedRanges - currentIndex 0   0:0
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.LocalJobRunner - mapreduce.cluster.local.dir for child : /tmp/hadoop-fandong/mapred/local/localRunner//fandong/jobcache/job_local1909352158_0001/attempt_local1909352158_0001_m_000000_0
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.Task - using new api for output committer
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.hbase.mapreduce.TableOutputFormat - Created table instance for stations
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.yarn.util.ProcfsBasedProcessTree - ProcfsBasedProcessTree currently is supported only on Linux.
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.Task -  Using ResourceCalculatorProcessTree : null
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Processing split: hdfs://hadoop01:9000/sampledata/input/ncdc/metadata/stations-fixed-width.txt:0+2253120
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Trying map output collector class: org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - (EQUATOR) 0 kvi 26214396(104857584)
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - mapreduce.task.io.sort.mb: 100
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - soft limit at 83886080
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - bufstart = 0; bufvoid = 104857600
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - kvstart = 26214396; length = 6553600
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+DEBUG IPC Parameter Sending Thread #0 org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong sending #2
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong got value #2
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getBlockLocations took 5ms
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.hdfs.DFSClient - newInfo = LocatedBlocks{
+  fileLength=2253120
+  underConstruction=false
+  blocks=[LocatedBlock{BP-723336137-192.168.1.125-1561855197126:blk_1073742449_1628; getBlockSize()=2253120; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[192.168.1.125:50010,DS-df15f93d-c5a9-4451-84ef-1d2b5980d733,DISK]]}]
+  lastLocatedBlock=LocatedBlock{BP-723336137-192.168.1.125-1561855197126:blk_1073742449_1628; getBlockSize()=2253120; corrupt=false; offset=0; locs=[DatanodeInfoWithStorage[192.168.1.125:50010,DS-df15f93d-c5a9-4451-84ef-1d2b5980d733,DISK]]}
+  isLastBlockComplete=true}
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.hdfs.DFSClient - Connecting to datanode 192.168.1.125:50010
+DEBUG IPC Parameter Sending Thread #0 org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong sending #3
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong got value #3
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.ipc.ProtobufRpcEngine - Call: getServerDefaults took 4ms
+DEBUG LocalJobRunner Map Task Executor #0 org.apache.hadoop.hdfs.protocol.datatransfer.sasl.SaslDataTransferClient - SASL client skipping handshake in unsecured configuration for addr = /192.168.1.125, datanodeId = DatanodeInfoWithStorage[192.168.1.125:50010,DS-df15f93d-c5a9-4451-84ef-1d2b5980d733,DISK]
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+INFO main org.apache.hadoop.mapreduce.Job - Job job_local1909352158_0001 running in uber mode : false
+INFO main org.apache.hadoop.mapreduce.Job -  map 0% reduce 0%
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.LocalJobRunner - 
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Starting flush of map output
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Spilling map output
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - bufstart = 0; bufend = 2281284; bufvoid = 104857600
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - kvstart = 26214396(104857584); kvend = 26101744(104406976); length = 112653/6553600
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.MapTask - Finished spill 0
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.Task - Task:attempt_local1909352158_0001_m_000000_0 is done. And is in the process of committing
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.LocalJobRunner - map
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.Task - Task 'attempt_local1909352158_0001_m_000000_0' done.
+INFO LocalJobRunner Map Task Executor #0 org.apache.hadoop.mapred.LocalJobRunner - Finishing task: attempt_local1909352158_0001_m_000000_0
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - map task executor complete.
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Starting reduce thread pool executor.
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Max local threads: 1
+DEBUG Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Reduce tasks to process: 1
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - Waiting for reduce tasks
+INFO pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - Starting task: attempt_local1909352158_0001_r_000000_0
+DEBUG pool-7-thread-1 org.apache.hadoop.mapred.SortedRanges - currentIndex 0   0:0
+DEBUG pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - mapreduce.cluster.local.dir for child : /tmp/hadoop-fandong/mapred/local/localRunner//fandong/jobcache/job_local1909352158_0001/attempt_local1909352158_0001_r_000000_0
+DEBUG pool-7-thread-1 org.apache.hadoop.mapred.Task - using new api for output committer
+INFO pool-7-thread-1 org.apache.hadoop.hbase.mapreduce.TableOutputFormat - Created table instance for stations
+INFO pool-7-thread-1 org.apache.hadoop.yarn.util.ProcfsBasedProcessTree - ProcfsBasedProcessTree currently is supported only on Linux.
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Task -  Using ResourceCalculatorProcessTree : null
+INFO pool-7-thread-1 org.apache.hadoop.mapred.ReduceTask - Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@5bb2b55f
+INFO pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - MergerManager: memoryLimit=1336252800, maxSingleShuffleLimit=334063200, mergeThreshold=881926912, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+INFO EventFetcher for fetching Map Completion Events org.apache.hadoop.mapreduce.task.reduce.EventFetcher - attempt_local1909352158_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+DEBUG EventFetcher for fetching Map Completion Events org.apache.hadoop.mapreduce.task.reduce.EventFetcher - Got 0 map completion events from 0
+DEBUG EventFetcher for fetching Map Completion Events org.apache.hadoop.mapreduce.task.reduce.EventFetcher - GetMapEventsThread about to sleep for 1000
+DEBUG localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.LocalFetcher - LocalFetcher 1 going to fetch: attempt_local1909352158_0001_m_000000_0
+DEBUG localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - attempt_local1909352158_0001_m_000000_0: Proceeding with shuffle since usedMemory (0) is lesser than memoryLimit (1336252800).CommitMemory is (0)
+INFO localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.LocalFetcher - localfetcher#1 about to shuffle output of map attempt_local1909352158_0001_m_000000_0 decomp: 2337614 len: 2337618 to MEMORY
+INFO localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput - Read 2337614 bytes from map-output for attempt_local1909352158_0001_m_000000_0
+INFO localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - closeInMemoryFile -> map-output of size: 2337614, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->2337614
+DEBUG localfetcher#1 org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl - map attempt_local1909352158_0001_m_000000_0 done 1 / 1 copied.
+INFO EventFetcher for fetching Map Completion Events org.apache.hadoop.mapreduce.task.reduce.EventFetcher - EventFetcher is interrupted.. Returning
+INFO pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - 1 / 1 copied.
+INFO pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Merger - Merging 1 sorted segments
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Merger - Down to the last merge-pass, with 1 segments left of total size: 2337532 bytes
+INFO pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - Merged 1 segments, 2337614 bytes to disk to satisfy reduce memory limit
+DEBUG pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - Disk file: /tmp/hadoop-fandong/mapred/local/localRunner/fandong/jobcache/job_local1909352158_0001/attempt_local1909352158_0001_r_000000_0/output/map_0.out.merged Length is 2337618
+INFO pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - Merging 1 files, 2337618 bytes from disk
+INFO pool-7-thread-1 org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl - Merging 0 segments, 0 bytes from memory into reduce
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Merger - Merging 1 sorted segments
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Merger - Down to the last merge-pass, with 1 segments left of total size: 2337532 bytes
+INFO pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - 1 / 1 copied.
+INFO pool-7-thread-1 org.apache.hadoop.conf.Configuration.deprecation - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+DEBUG main-SendThread(192.168.1.125:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16bd7990596007e, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,577,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3431333437ffffffc23cffffffecffffffe6ffffffedfffffff763ffffff9350425546a15a86861646f6f70303110ffffff83ffffffc3218ffffffbcffffff93ffffffe4ffffffbcffffffbd2d100183,s{294,294,1562690270160,1562690270160,0,0,0,0,62,0,294} 
+DEBUG pool-7-thread-1 org.apache.hadoop.ipc.RpcClient - Use SIMPLE authentication for service ClientService, sasl=false
+DEBUG pool-7-thread-1 org.apache.hadoop.ipc.RpcClient - Connecting to hadoop01/192.168.1.125:41347
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: starting, connections 1
+INFO main org.apache.hadoop.mapreduce.Job -  map 100% reduce 0%
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG pool-7-thread-1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 0 method_name: "Get" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 0, totalSize: 446 bytes
+DEBUG pool-7-thread-1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 1 method_name: "Scan" request_param: true priority: 100
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 1 cell_block_meta { length: 1336 }, totalSize: 1358 bytes
+DEBUG pool-7-thread-1 org.apache.hadoop.hbase.client.ClientSmallScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 2 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 2, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 3 method_name: "Multi" request_param: true
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 3, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 4 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 4, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 5 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 5, totalSize: 24354 bytes
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 6 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 6, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 7 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 7, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 8 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 8, totalSize: 24354 bytes
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 9 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 9, totalSize: 24354 bytes
+DEBUG htable-pool4-t1 org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: wrote request header call_id: 10 method_name: "Multi" request_param: true
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong org.apache.hadoop.ipc.RpcClient - IPC Client (771775563) connection to hadoop01/192.168.1.125:41347 from fandong: got response header call_id: 10, totalSize: 1252 bytes
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Task - Task:attempt_local1909352158_0001_r_000000_0 is done. And is in the process of committing
+INFO pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - reduce > reduce
+INFO pool-7-thread-1 org.apache.hadoop.mapred.Task - Task 'attempt_local1909352158_0001_r_000000_0' done.
+INFO pool-7-thread-1 org.apache.hadoop.mapred.LocalJobRunner - Finishing task: attempt_local1909352158_0001_r_000000_0
+INFO Thread-80 org.apache.hadoop.mapred.LocalJobRunner - reduce task executor complete.
+DEBUG Thread-80 org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.fs.FileContext.getAbstractFileSystem(FileContext.java:331)
+INFO main org.apache.hadoop.mapreduce.Job -  map 100% reduce 100%
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getTaskCompletionEvents(Job.java:670)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+INFO main org.apache.hadoop.mapreduce.Job - Job job_local1909352158_0001 completed successfully
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.getCounters(Job.java:758)
+INFO main org.apache.hadoop.mapreduce.Job - Counters: 35
+	File System Counters
+		FILE: Number of bytes read=41144182
+		FILE: Number of bytes written=44457766
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4506240
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=28164
+		Map output records=28164
+		Map output bytes=2281284
+		Map output materialized bytes=2337618
+		Input split bytes=141
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=28164
+		Reduce shuffle bytes=2337618
+		Reduce input records=28164
+		Reduce output records=28164
+		Spilled Records=56328
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=23
+		Total committed heap usage (bytes)=517996544
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2253120
+	File Output Format Counters 
+		Bytes Written=0
+DEBUG main org.apache.hadoop.security.UserGroupInformation - PrivilegedAction as:fandong (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:320)
+DEBUG Thread-1 org.apache.hadoop.ipc.Client - stopping client from cache: org.apache.hadoop.ipc.Client@1e800aaa
+DEBUG Thread-1 org.apache.hadoop.ipc.Client - removing client from cache: org.apache.hadoop.ipc.Client@1e800aaa
+DEBUG Thread-1 org.apache.hadoop.ipc.Client - stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@1e800aaa
+DEBUG Thread-1 org.apache.hadoop.ipc.Client - Stopping client
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong: closed
+DEBUG IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong org.apache.hadoop.ipc.Client - IPC Client (771775563) connection to hadoop01/192.168.1.125:9000 from fandong: stopped, remaining connections 0
